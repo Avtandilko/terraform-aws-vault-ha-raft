@@ -280,6 +280,7 @@ data "ignition_file" "node_cert" {
 }
 
 data "ignition_file" "flatcar_update_config" {
+  filesystem = "root"
   path = "/etc/flatcar/update.conf"
   content {
     content = <<-EOT
