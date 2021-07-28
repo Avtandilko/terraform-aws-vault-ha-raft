@@ -279,6 +279,16 @@ data "ignition_file" "node_cert" {
   }
 }
 
+data "ignition_file" "flatcar_update_config" {
+  path = "/etc/flatcar/update.conf"
+  content {
+    content = <<-EOT
+        GROUP=stable
+        REBOOT_STRATEGY=off
+      EOT
+  }
+}
+
 data "ignition_config" "node" {
   count = var.cluster_count
 
@@ -298,6 +308,7 @@ data "ignition_config" "node" {
     data.ignition_file.node_ca.rendered,
     data.ignition_file.node_key[count.index].rendered,
     data.ignition_file.node_cert[count.index].rendered,
+    data.ignition_file.flatcar_update_config.rendered,
   ]
   systemd = [
     data.ignition_systemd_unit.service.rendered,

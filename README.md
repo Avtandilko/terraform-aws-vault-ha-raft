@@ -277,6 +277,7 @@ No modules.
 | [ignition_file.node_cert](https://registry.terraform.io/providers/community-terraform-providers/ignition/latest/docs/data-sources/file) | data source |
 | [ignition_file.node_key](https://registry.terraform.io/providers/community-terraform-providers/ignition/latest/docs/data-sources/file) | data source |
 | [ignition_file.sshd_config](https://registry.terraform.io/providers/community-terraform-providers/ignition/latest/docs/data-sources/file) | data source |
+| [ignition_file.update_config](https://registry.terraform.io/providers/community-terraform-providers/ignition/latest/docs/data-sources/file) | data source |
 | [ignition_filesystem.data](https://registry.terraform.io/providers/community-terraform-providers/ignition/latest/docs/data-sources/filesystem) | data source |
 | [ignition_systemd_unit.mount](https://registry.terraform.io/providers/community-terraform-providers/ignition/latest/docs/data-sources/systemd_unit) | data source |
 | [ignition_systemd_unit.service](https://registry.terraform.io/providers/community-terraform-providers/ignition/latest/docs/data-sources/systemd_unit) | data source |
